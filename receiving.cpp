@@ -633,7 +633,7 @@ void showMessage(const td::td_api::chat &chat, IncomingMessage &fullMessage,
     TgMessageInfo &messageInfo = fullMessage.messageInfo;
     messageInfo.repliedMessage = std::move(fullMessage.repliedMessage);
 
-    if (message.ttl_ != 0) {
+    /*if (message.ttl != 0) {
         if (purple_account_get_bool(account.purpleAccount, AccountOptions::ShowSelfDestruct, AccountOptions::ShowSelfDestructDefault)) {
             // TRANSLATOR: In-chat warning message
             const char *text   = _("Received self-destructing message, displaying anyway");
@@ -646,7 +646,7 @@ void showMessage(const td::td_api::chat &chat, IncomingMessage &fullMessage,
             showMessageText(account, chat, messageInfo, NULL, notice.c_str());
             return;
         }
-    }
+    }*/
 
     FileInfo fileInfo;
     getFileFromMessage(fullMessage, fileInfo);
