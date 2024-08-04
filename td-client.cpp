@@ -421,8 +421,7 @@ void PurpleTdClient::sendTdlibParameters()
     parameters->device_model_ = "Desktop";
     parameters->system_version_ = "Unknown";
     parameters->application_version_ = "1.0";
-    parameters->enable_storage_optimizer_ = (purple_account_get_bool(m_account, AccountOptions::KeepInlineDownloads,
-                                                                     AccountOptions::KeepInlineDownloadsDefault) == FALSE);
+
     m_transceiver.sendQuery(std::move(parameters),
                             &PurpleTdClient::authResponse);
 }
