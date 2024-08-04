@@ -673,7 +673,7 @@ void PurpleTdClient::registerUser()
                 "Registration is required but this libpurple doesn't support input requests");
         }
     } else
-        m_transceiver.sendQuery(td::td_api::make_object<td::td_api::registerUser>(firstName, lastName),
+        m_transceiver.sendQuery(td::td_api::make_object<td::td_api::registerUser>(firstName, lastName, false),
                                 &PurpleTdClient::authResponse);
 }
 
@@ -686,7 +686,7 @@ void PurpleTdClient::displayNameEntered(PurpleTdClient *self, const gchar *name)
                                 // TRANSLATOR: Connection error message after failed registration.
                                 _("Display name is required for registration"));
     else
-        self->m_transceiver.sendQuery(td::td_api::make_object<td::td_api::registerUser>(firstName, lastName),
+        self->m_transceiver.sendQuery(td::td_api::make_object<td::td_api::registerUser>(firstName, lastName, false),
                                       &PurpleTdClient::authResponse);
 }
 
