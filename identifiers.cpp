@@ -60,7 +60,7 @@ UserId getSenderUserId(const td::td_api::message &message)
     return getUserId(message.sender_id_);
 }
 
-UserId getSenderUserId(const td::td_api::messageForwardOriginUser &forwardOrigin)
+UserId getSenderUserId(const td::td_api::messageOriginUser &forwardOrigin)
 {
     return UserId(forwardOrigin.sender_user_id_);
 }
@@ -107,7 +107,7 @@ ChatId getChatId(const td::td_api::updateChatTitle &update)
     return ChatId(update.chat_id_);
 }
 
-ChatId getChatId(const td::td_api::messageForwardOriginChannel &forwardOrigin)
+ChatId getChatId(const td::td_api::messageOriginChannel &forwardOrigin)
 {
     return ChatId(forwardOrigin.chat_id_);
 }

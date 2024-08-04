@@ -10,7 +10,7 @@ pushd build
   #git clone https://github.com/tdlib/td.git
   tar zxf ../td.tar.gz
   pushd td
-    git checkout 4ed0b23c9c99868ab4d2d28e8ff244687f7b3144
+    git checkout 3870c29b158b75ca5e48e0eebd6b5c3a7994a000
     mkdir build
     pushd build
       cmake -DCMAKE_BUILD_TYPE=Release ..
