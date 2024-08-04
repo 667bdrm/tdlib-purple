@@ -7,10 +7,9 @@ JOBS="$(nproc || echo 1)"
 rm -rf build
 mkdir build
 pushd build
-  #git clone https://github.com/tdlib/td.git
-  tar zxf ../td.tar.gz
+  git clone https://github.com/tdlib/td.git
   pushd td
-    git checkout d93a99e3351db82573d765ce4f5e84714c277518
+    git checkout 1fa2a372a88c26369dcac2ce476166531df74a77 # 1.8.34
     mkdir build
     pushd build
       cmake -DCMAKE_BUILD_TYPE=Release ..
