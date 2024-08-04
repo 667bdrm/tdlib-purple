@@ -68,7 +68,7 @@ static std::string messageTypeToString(const td::td_api::MessageContent &content
     C(messagePaymentSuccessful)
     C(messagePaymentSuccessfulBot)
     C(messageContactRegistered)
-    C(messageWebsiteConnected)
+    C(botWriteAccessAllowReasonConnectedWebsite)
     C(messagePassportDataSent)
     C(messagePassportDataReceived)
     C(messageProximityAlertTriggered)
